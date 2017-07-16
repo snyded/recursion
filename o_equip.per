@@ -1,0 +1,25 @@
+-- o_equip.per - Main screen source for executable o_equip (o_equip.4ge)
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+DATABASE stores
+
+SCREEN
+{
+
+------------------------------------------------ Press CTRL-W for Help --------
+
+
+  Equipment ID     [f000       ]      Equipment Name     [f001                ]
+
+  Direction        [a]
+}
+
+TABLES equipment
+
+ATTRIBUTES
+f000 = FORMONLY.eq_id TYPE INTEGER,
+  COMMENTS="Enter the equipment id                                      (CTRL-E for EQ_IDs)";
+f001 = equipment.eqp_name;
+a = FORMONLY.direction TYPE CHAR, UPSHIFT, REQUIRED, INCLUDE=("U", "D"),
+  COMMENTS="Enter the direction... <U>p or <D>own";

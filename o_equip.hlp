@@ -1,0 +1,22 @@
+-- o_equip.hlp - Help source for executable o_equip (o_equip.4ge)
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+.1
+FIELD EDITING CONTROL KEYS:
+CTRL X    : Deletes a character
+CTRL A    : Toggles in and out of character insertion mode
+CTRL D    : Clears to the end of the field
+left      : Backspace
+right     : Forward Space
+up        : Traverse backwards through the fields
+CTRL F    : 'Fast-forward' through the fields
+CTRL B    : 'Fast-reverse' through the fields
+CTRL G    : Prints the current screen (including windows)
+CTRL P    : Brings in most recent column value of the row
+CTRL W    : Display help message
+CR        : Next field
+CTRL I    : Next field
+down      : Next field
+ESCAPE    : Entry Complete
+INTERRUPT : Abort Command

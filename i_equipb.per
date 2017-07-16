@@ -1,0 +1,31 @@
+-- i_equipb.per - Browse screen source for executable i_equip (i_equip.4ge)
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+DATABASE stores
+
+SCREEN
+{
+ Eqp. ID     Eqp. Name
+ ----------  --------------------
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+}
+
+TABLES equipment
+
+ATTRIBUTES
+f000 = equipment.eq_id;
+f001 = equipment.eqp_name;
+
+INSTRUCTIONS
+  DELIMITERS "  "
+  SCREEN RECORD b_record[10] (eq_id, eqp_name)

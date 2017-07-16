@@ -1,0 +1,33 @@
+-- i_equip.per - Main screen source for executable i_equip (i_equip.4ge)
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+DATABASE stores
+
+SCREEN
+{
+
+--ROW-[x000  ]-OF-[x001  ]---------------------- Press CTRL-W for Help --------
+
+
+Equipment ID       [f000       ]
+
+Equipment Name     [f001                ]
+
+
+Parent:
+  Equipment ID     [f002       ]      Equipment Name     [f003                ]
+}
+
+TABLES equipment
+
+ATTRIBUTES
+f000 = equipment.eq_id,
+  COMMENTS="Enter the equipment id";
+f001 = equipment.eqp_name,
+  COMMENTS="Enter the equipment name", UPSHIFT;
+f002 = equipment.parent_eq_id,
+  COMMENTS="Enter the equipment id of this equipment's parent           (CTRL-E for EQ_IDs)";
+f003 = FORMONLY.parent_eqp_name;
+x000 = FORMONLY.q_cur, NOENTRY, REVERSE;
+x001 = FORMONLY.q_cnt, NOENTRY, REVERSE;

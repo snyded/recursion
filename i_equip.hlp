@@ -1,0 +1,103 @@
+-- i_equip.hlp - Help source for executable i_equip (i_equip.4ge)
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+.1
+OPTIONS.
+
+The OPTIONS Menu presents you with the following options:
+
+ > Query            Searches the table
+ > Browse           Browse through rows in Current List
+ > Next             Displays the next row in the Current List
+ > Previous         Displays the previous row in the Current List
+ > First            Displays the first row in the Current List
+ > Last             Displays the last row in the Current List
+ > Add              Adds data to the active table
+ > Update           Changes a row in the active table
+ > Remove           Deletes a row from the active table
+ > Current          Displays the current row of the active table
+ > Exit             Returns to the Main Menu
+
+PROCEDURE:
+
+Enter the first letter of the menu option you want:  q for Query, b for Browse,
+n for Next, p for Previous, f for First, l for Last, a for Add, u for Update, r
+for Remove, c for Current, or e for Exit.
+
+Use the Next and Previous options to view the next or previous row in the
+Current List.  First use the Query option to generate a Current List (a list of
+all the rows that satisfy your query).  If there is more than one row in the
+Current List, you can select the Next option to look at the next row.  After
+you use Next, you can use the Previous option to look at the previous row.
+
+Use the Exit option to leave the OPTIONS Menu and return to the Main Menu.
+After you select the Exit option, Options displays the Main Menu.
+
+
+QUIT:
+
+Select the Exit option to leave the OPTIONS Menu and return to the MAIN Menu.
+
+
+NOTES:
+
+You cannot select Browse, Update, Next, Previous, First, Last, Remove, or
+Current until you have generated a Current List with Query.
+.2
+FIELD EDITING CONTROL KEYS:
+CTRL X    : Deletes a character
+CTRL A    : Toggles in and out of character insertion mode
+CTRL D    : Clears to the end of the field
+left      : Backspace
+right     : Forward Space
+up        : Traverse backwards through the fields
+CTRL F    : 'Fast-forward' through the fields
+CTRL B    : 'Fast-reverse' through the fields
+CTRL G    : Prints the current screen (including windows)
+CTRL P    : Brings in most recent column value of the row
+CTRL W    : Display help message
+CR        : Next field
+CTRL I    : Next field
+down      : Next field
+ESCAPE    : Entry Complete
+INTERRUPT : Abort Command
+
+
+
+QUERY COMPARISON SYMBOLS:
+<     Less than                 <=    Less than or equal
+>     Greater than              >=    Greater than or equal
+=     Equal                     <>    Not equal
+>>    Last value (only for indexed columns, without other comparisons)
+<<    First value (same conditions as last value)
+:     Range (inclusive)
+|     OR condition
+The colon for range comparison is typed between the desired range values
+The pipe symbol for OR separates the different possibilities
+         All other symbols are typed in front of the column value
+An asterisk (*) is used for wild card comparison of character columns
+A blank field means don't care
+         To match for a blank character field, use the equality symbol
+.3
+REMOVE.
+
+The REMOVE Menu presents you with the following options:
+
+ > No               Does NOT remove this row from the active table
+ > Yes              Removes this row from the active table
+
+
+PROCEDURE:
+
+Enter the first letter of the menu option you want:  n for No, y for Yes.
+.1000
+Enter the piece of equipment's ID number.
+
+.1001
+Enter the piece of equipment's name.
+
+.1002
+Enter the equipment ID number for the parent of this piece of equipment
+(if applicable).
+

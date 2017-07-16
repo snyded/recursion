@@ -1,0 +1,26 @@
+-- lu_equip.per - Screen source for equipment lookups
+-- Copyright (C) 1995  David A. Snyder  All Rights Reserved
+
+
+DATABASE stores
+
+SCREEN
+{
+ Eqp. ID     Eqp. Name
+ ----------  --------------------
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+[f000      ][f001                ]
+}
+
+TABLES equipment
+
+ATTRIBUTES
+f000 = equipment.eq_id;
+f001 = equipment.eqp_name;
+
+INSTRUCTIONS
+    DELIMITERS "  "
+    SCREEN RECORD s_record[5] (eq_id, eqp_name)
